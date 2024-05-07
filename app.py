@@ -2,7 +2,7 @@
 import streamlit as st
 import ollama
 
-## the title ##
+## the title
 st.title("💬 Phi3 Chatbot")
 
 ## the first message of the AI assisstant ##

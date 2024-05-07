@@ -7,7 +7,7 @@ st.title("💬 Phi3 Chatbot")
 
 ## the first message of the AI assisstant ##
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "Hello tehre, how can I help you, today?"}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "Hello there! How can I help you today?"}]
 
 ### Message History ##
 for msg in st.session_state.messages:

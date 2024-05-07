@@ -20,6 +20,8 @@ You can find more info in the official Phi-3 Mini docs.
 
 # Steps
 
+*If you can't use `pip` then use `conda` instead*
+
 1 - Create a new conda environment
 ```
 conda create --name envStreamPhi
@@ -31,9 +33,11 @@ conda activate envStreamPhi
 3 - Clone StreamLit template
 ```
 git clone https://github.com/streamlit/streamlit.git
+conda install streamlit
 ```
 4 - Install ollama & pull the phi-3 model
 ```
+pip install ollama
 ollama pull phi3
 ```
 5 - Pull the Embeddings model:

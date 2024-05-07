@@ -56,7 +56,7 @@ In order to build the AI assistant, you have 2 choices : clone the repo and get 
 ## I - First option : 
 1 - Clone the project from Github 
 ```
-git clone https://github.com/JalelTounsi/oLLaMaStreamPhi.git
+git clone https://github.com/chrnthnkmutt/phi3_experiment.git
 ```
 2 - run the application
 ```

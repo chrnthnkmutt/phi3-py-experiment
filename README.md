@@ -20,7 +20,7 @@ You can find more info in the official Phi-3 Mini docs.
 
 # Steps
 
-*If you can't use `pip` then use `conda` instead*
+*If you can't use `pip` then use `conda` instead to install the library*
 
 1 - Create a new conda environment
 ```

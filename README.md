@@ -1,5 +1,5 @@
 # Phi3_experiment
-# Building Your Intelligent Web App With Streamlit (and Phi-3 SLM)
+# Intelligent Chatbot with Phi-3 SLM and Streamlit Library
 
 Let's build a chatbot with just Python using the Streamlit library, Ollama, and Microsoft Phi-3. 
 

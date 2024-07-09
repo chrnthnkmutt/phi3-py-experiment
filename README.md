@@ -146,4 +146,4 @@ streamlit run app.py
 ```
 ## Experimenting Phi-3 Vision on Jupyter Notebook
 
-Visit the file name `phi3-vis-ocr.ipynb` and `phi3-vis-gen.ipynb` for execution the file for testing multimodal performance of Phi-3 Vision.
+Visit the file name `phi3-vis-ocr.ipynb` and `phi3-vis-gen.ipynb` for execution the file for testing multimodal performance of Phi-3 Vision. Recommended to run on Google Collaboratory

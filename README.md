@@ -1,28 +1,28 @@
 # Phi3_experiment
-# Intelligent Chatbot with Phi-3 SLM and Streamlit Library
+## Intelligent Chatbot with Phi-3 SLM and Streamlit Library
 
 ![](Project_Banner.jpg)
 
 Let's build a chatbot with just Python using the Streamlit library, Ollama, and Microsoft Phi-3. 
 
-## Streamlit: 
+### Streamlit: 
 turns data scripts into shareable web apps in minutes. All in pure Python. No front‑end experience required.
 You can find more info in the official Streamlit docs.
 
 
-## Ollama: 
+### Ollama: 
 allows you to run open-source large language models, locally
-You can find more info in the official Ollama docs.
+You can find more info in the official Ollama docs. 
 
 
-## Phi-3 Mini: 
+### Phi-3 Mini: 
 is a 3.8B parameters, lightweight, state-of-the-art open model by Microsoft.
 You can find more info in the official Phi-3 Mini docs.
 
 
-# Steps
+### Steps
 
-*If you can't use `pip` then use `conda` instead to install the library*
+*If you can't use `pip` then use `conda` instead to install the library*. Ensure that you have install Ollama platform in to your computer, by visiting this link: [Ollama.com](https://ollama.com/)
 
 1 - Create a new conda environment
 ```
@@ -51,11 +51,11 @@ ollama pull nomic-embed-text
 streamlit hello
 ```
 
-# Build the AI assistant
+### Build the AI assistant
 
 In order to build the AI assistant, you have 2 choices : clone the repo and get all the code from the get-go or coding along with me.
 
-## I - First option : 
+#### I - First option : 
 1 - Clone the project from Github 
 ```
 git clone https://github.com/chrnthnkmutt/phi3_experiment.git
@@ -65,25 +65,25 @@ git clone https://github.com/chrnthnkmutt/phi3_experiment.git
 streamlit run app.py
 ```
 
-## II - Second option: 
+#### II - Second option: 
 code along
 1 - Create your app.py file
 ```
 app.py
 ```
 2 - Add imports
-```
+```py
 import streamlit as st
 import ollama
 ```
 
 3 - Add the defacto message
-```
+```py
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Hello tehre, how can I help you, today?"}]
 ```
 4 - Add the message history
-```
+```py
 for msg in st.session_state.messages:
     if msg["role"] == "user":
         st.chat_message(msg["role"], avatar="🧑‍💻").write(msg["content"])
@@ -91,7 +91,7 @@ for msg in st.session_state.messages:
         st.chat_message(msg["role"], avatar="🤖").write(msg["content"])
 ```
 5 - Configure model
-```
+```py
 def generate_response():
     response = ollama.chat(model='phi3', stream=True, messages=st.session_state.messages)
     for partial_resp in response:
@@ -100,7 +100,7 @@ def generate_response():
         yield token
 ```
 6 - Configure the prompt
-```
+```py
 if prompt := st.chat_input():
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user", avatar="🧑‍💻").write(prompt)
@@ -109,7 +109,7 @@ if prompt := st.chat_input():
     st.session_state.messages.append({"role": "assistant", "content": st.session_state["full_message"]})   
 ```
 7 - all the codebase of app.py
-```
+```py
 import streamlit as st
 import ollama
 
@@ -144,3 +144,6 @@ Run the Streamlit app
 ```
 streamlit run app.py
 ```
+## Experimenting Phi-3 Vision on Jupyter Notebook
+
+Visit the file name `phi3-vis-ocr.ipynb` and `phi3-vis-gen.ipynb` for execution the file for testing multimodal performance of Phi-3 Vision.

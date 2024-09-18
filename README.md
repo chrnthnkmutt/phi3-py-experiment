@@ -1,4 +1,4 @@
-# Phi3_experiment
+# phi3-py-experiment
 ## Intelligent Chatbot with Phi-3 SLM and Streamlit Library
 
 ![](Project_Banner.jpg)

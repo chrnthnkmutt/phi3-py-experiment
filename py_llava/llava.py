@@ -1,7 +1,7 @@
 import ollama
 
 res = ollama.chat(
-	model="llava-phi3",
+	model="llava",
 	messages=[
 		{
 			'role': 'user',

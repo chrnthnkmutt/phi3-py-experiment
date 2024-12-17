@@ -16,7 +16,7 @@ for msg in st.session_state.messages:
     else:
         st.chat_message(msg["role"], avatar="🤖").write(msg["content"])
 
-## Configure the model to use (in our case, the Phi-3)
+## Configure the model to use (in our case, the Gemma2:2B model)
 def generate_response():
     response = ollama.chat(model='gemma2:2b', stream=True, messages=st.session_state.messages)
     for partial_resp in response:
